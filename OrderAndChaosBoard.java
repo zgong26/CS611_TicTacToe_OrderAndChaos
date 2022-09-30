@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class OrderAndChaosBoard extends Board {
 	private final int sideLength;
@@ -180,5 +181,16 @@ public class OrderAndChaosBoard extends Board {
 		if (chessCount < sideLength * sideLength)
 			return "pending";
 		return "draw";
+	}
+	
+	@Override
+	public void clear() {
+		for (int i = 0; i < sideLength; i++) {
+			for (int j = 0; j < sideLength; j++) {
+				board[i][j] = "";
+			}
+		}
+		status = "pending";
+		chessCount = 0;
 	}
 }

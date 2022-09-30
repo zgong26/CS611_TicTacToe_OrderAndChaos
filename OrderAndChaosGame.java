@@ -93,7 +93,7 @@ public class OrderAndChaosGame extends BoardGame {
 		}
 		System.out.print(board);
 		if (board.getStatus().equals("draw")) {
-			System.out.printf("It's a draw! Team %s(Chaos) wins!!\n", t2.getName());
+			System.out.printf("Team %s(Chaos) wins!!\n", t2.getName());
 			t2.addScore(1);
 			B.addScore(1);
 		} else {
